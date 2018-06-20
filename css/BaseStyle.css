@@ -15,7 +15,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -23,8 +22,28 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+
+@font-face {
+    font-family: beyondMountains;
+    src: url(../fonts/beyond_the_mountains.otf);
+}
+
+
+@font-face {
+    font-family: robotoThin;
+    src: url(../fonts/roboto.thin.ttf);
+}
+
+@font-face {
+    font-family: robotoLight;
+    src: url(../fonts/roboto.light.ttf);
+}
+
+
 body {
-	line-height: 1;
+    line-height: 1;
+    font-family: robotoThin;
 }
 ol, ul {
 	list-style: none;
@@ -47,11 +66,6 @@ footer{
     height: 50px;
     bottom: 0;
     background: cornflowerblue;
-}
-
-@font-face {
-    font-family: beyondMountains;
-    src: url(../fonts/beyond_the_mountains.otf);
 }
 
 header,footer{
@@ -79,7 +93,7 @@ h1 {
     margin-right: 0;
 }
 
-header div,footer div{
+header div,footer div,.single-card .info div,.interract-section div{
     float: left;
 }
 footer div{
@@ -126,4 +140,89 @@ footer div{
     top: 70px;
     bottom: 70px;
     overflow: auto;
+}
+.single-card{
+    width: 100%;
+    min-height: 510px;
+    height: auto;
+    border-bottom: 1px solid #8b838357;
+    padding: 8px 0px;
+}
+.info{
+    width: 100%;
+    height: 60px;
+}
+.profile-pic{
+    width: 15%;
+    height: 100%;
+    background-image: url('../images/profile_pic.png');
+    background-repeat: no-repeat;
+    background-size: 2.5em;
+    background-position: 50%;
+}
+.name{
+    width:75%;
+    height: 100%;
+    font-family: robotoLight;
+}
+.more-options{
+    width: 10%;
+    height: 100%;
+    background-image: url('../images/more-options.png');
+    background-repeat: no-repeat;
+    background-size: 3.5em;
+    background-position: 50%;
+}
+.name h2{
+    padding: 1.2em 0.5em;
+}
+.card-image{
+    width: 100%;
+    height: 350px;
+    background-image: url('../images/card_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+.description{
+    width: 100%;
+    height: 60px;
+    margin-top: -60px;
+    background: #00000061;
+    color: white;
+    text-align: center;
+}
+.description:before {      /* create a full-height inline block pseudo-element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+}
+.interract-section{
+    width: 100%;
+    height:50px;
+}
+.interract-section .like,.interract-section .message,.interract-section .share,.interract-section .bookmark{
+    width: 15%;
+    height: 100%;
+    background-image: url('../images/like_icon.png');
+    background-repeat: no-repeat;
+    background-size: 2em;
+    background-position: 50%;
+}
+.interract-section .message{
+    background-image: url('../images/message_icon.png');
+}
+.interract-section .share{
+    background-image: url('../images/link_icon.png');
+}
+.interract-section .bookmark{
+    background-image: url('../images/bookmark_icon.png');
+}
+.comments{
+    width: 94%;
+    padding: 0 3%;
+}
+.comments ul li{
+    padding:3px 0;
 }

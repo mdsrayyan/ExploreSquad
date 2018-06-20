@@ -6,7 +6,9 @@
     <div class="search-button"></div>
 </header>
 <div class="Feed-Wrapper">
-    <div ng-repeat="i in loop">
-        {{i}}
-    </div>
+    <ul>
+        <li ng-repeat="i in getNumber(number) track by $index">
+            <cards></cards>
+        </li>
+    </ul>
 </div>

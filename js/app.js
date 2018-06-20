@@ -15,6 +15,15 @@ app.config(function($routeProvider) {
         replace: true,
         templateUrl: 'views/BottomNavigation.html'
     };
+}).directive("cards", function() {
+    return {
+        restrict : "E",
+        replace: true,
+        templateUrl: 'views/cards.html'
+    };
 }).controller("HomeController", function ($scope) {
-    $scope.loop = 10;
+    $scope.number = 5;
+    $scope.getNumber = function(num) {
+        return new Array(num);   
+    }
 });
